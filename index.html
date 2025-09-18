@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Heritage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slideshow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      animation: slideshow 30s infinite;
+      background-size: cover;
+      background-position: center;
+    }
+    @keyframes slideshow {
+      0%   { background-image: url('https://as1.ftcdn.net/v2/jpg/02/79/58/60/1000_F_279586002_iDjWwFiwATXYMNIhC6DgzGSwcOAg6YSe.jpg'); }
+      50%  { background-image: url('https://assets.cntraveller.in/photos/65a4ca16f4f38543f111ce6d/4:3/w_4608,h_3456,c_limit/1444924249'); }
+      100% { background-image: url('https://cdn.britannica.com/73/140973-050-6212C556/Shore-Temple-Mamallapuram-Seven-Pagodas-Tamil-Nadu.jpg'); }
+    }
+
+    .flag-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      font-size: 5rem; /* Adjust size of emoji */
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .flag-container:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="slideshow"></div>
+
+  <!-- Emoji instead of image -->
+  <div class="flag-container" onclick="window.location.href='second.html'">
+    🇮🇳
+  </div>
+</body>
+</html>

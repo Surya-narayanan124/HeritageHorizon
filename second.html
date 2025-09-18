@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gallery | Indian Heritage AR Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --saffron: #FF9933;
+    --green: #138808;
+    --navy-blue: #000080;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+  }
+
+  /* swipe container full screen */
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    /* give Indian flag background inside card */
+    background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  /* FULL image visible */
+  .card img {
+    width: 100%;
+    height: 100vh;           /* fill screen height */
+    object-fit: contain;     /* show entire image without crop */
+  }
+
+  /* Overlay text per card */
+  .card h2 {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255,255,255,0.85);
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--navy-blue);
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+
+  /* header/footer fixed */
+  header, footer {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+
+  header { top: 0; }
+  footer { bottom: 0; }
+
+  main {
+    margin-top: 64px;
+    margin-bottom: 40px;
+  }
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="flex items-center justify-between p-4 bg-white/80 backdrop-blur-sm border-b-4 border-[var(--navy-blue)]">
+    <div class="flex items-center space-x-3">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/240px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="h-10 w-10">
+      <h1 class="text-[var(--navy-blue)] text-xl font-bold tracking-tight">Indian Heritage AR Gallery</h1>
+    </div>
+    <nav class="space-x-6 text-[var(--navy-blue)] font-semibold">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="second.html" class="hover:underline">Gallery</a>
+      <a href="about.html" class="hover:underline">About</a>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <div class="carousel">
+      <!-- 1 Taj Mahal -->
+      <a class="card" href="https://go.echo3d.co/cUQU" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/da/Taj-Mahal.jpg" alt="Taj Mahal">
+        <h2>Taj Mahal</h2>
+      </a>
+
+      <!-- 2 Ellora Caves -->
+      <a class="card" href="https://go.echo3d.co/NN6m" target="_blank">
+        <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-470586360_super.jpg?fit=crop&ar=1%3A1&w=1200&auto=format&q=75" alt="Ellora Caves">
+        <h2>Ellora Caves</h2>
+      </a>
+
+      <!-- 3 Brihadeshwara Temple -->
+      <a class="card" href="https://your-ar-link-3.com" target="_blank">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP1D-9tdxF8OESZ2Yj8o32KJ0NEu_s8FsjSA&s" alt="Brihadeshwara Temple">
+        <h2>Brihadeshwara Temple</h2>
+      </a>
+
+      <!-- 4 India Gate -->
+      <a class="card" href="https://go.echo3d.co/yxcM" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/India_Gate_on_the_evening_of_77th_Independence_day.jpg" alt="India Gate">
+        <h2>India Gate</h2>
+      </a>
+
+      <!-- 5 Konark Sun Temple -->
+      <a class="card" href="https://your-ar-link-5.com" target="_blank">
+        <img src="https://cdn.statically.io/img/www.legacyias.com/wp-content/uploads/2020/05/Konark-Sun-Temple.jpg?quality=100" alt="Konark Sun Temple">
+        <h2>Konark Sun Temple</h2>
+      </a>
+
+      <!-- 6 Red Fort -->
+      <a class="card" href="https://your-ar-link-6.com" target="_blank">
+        <img src="https://cdn.britannica.com/20/189820-050-D650A54D/Red-Fort-Old-Delhi-India.jpg" alt="Red Fort">
+        <h2>Red Fort</h2>
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-2 text-[var(--navy-blue)] text-sm font-bold bg-white/70">
+    © 2025 Indian Heritage AR Gallery | Celebrating India's Culture & Monuments
+  </footer>
+</body>
+</html>

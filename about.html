@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About | Indian Heritage AR Gallery</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root {
+    --saffron: #FF9933;
+    --green: #138808;
+    --navy-blue: #000080;
+  }
+  body {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
+    font-family: "Space Grotesk", sans-serif;
+  }
+</style>
+</head>
+<body class="flex flex-col">
+  <!-- Header -->
+  <header class="flex items-center justify-between p-4 sticky top-0 bg-white/80 backdrop-blur-sm z-10 border-b-4 border-[var(--navy-blue)]">
+    <div class="flex items-center space-x-3">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1PjCLrlENmpKryNpEM1jW3RQ2MolSKtUV0Q&s" alt="Ashoka Chakra" class="h-10 w-10">
+      <h1 class="text-[var(--navy-blue)] text-xl font-bold tracking-tight">Indian Heritage AR Gallery</h1>
+    </div>
+    <nav class="space-x-6 text-[var(--navy-blue)] font-semibold">
+      <a href="index.html" class="hover:underline">Home</a>
+      <a href="second.html" class="hover:underline">Gallery</a>
+      <a href="about.html" class="hover:underline">About</a>
+    
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="flex-grow p-8 text-center">
+    <h2 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">About This Project</h2>
+    <p class="text-lg text-gray-800 max-w-3xl mx-auto">
+      The <strong>Indian Heritage AR Gallery</strong> is an interactive experience celebrating the rich culture and history of India. 
+      Explore iconic monuments in Augmented Reality, from the Taj Mahal to the Konark Sun Temple, and witness the grandeur of our heritage.
+    </p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 text-[var(--navy-blue)] text-sm font-bold bg-white/70">
+    © 2025 Indian Heritage AR Gallery | Celebrating India's Culture & Monuments
+  </footer>
+</body>
+</html>
