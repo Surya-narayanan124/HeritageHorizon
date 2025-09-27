@@ -13,10 +13,31 @@
       --navy-blue: #000080;
     }
     body {
-      background: linear-gradient(to bottom, var(--saffron), white, var(--green));
+      background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
       font-family: 'Space Grotesk', sans-serif;
       margin: 0;
       padding: 1.5rem;
+      color: var(--navy-blue);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .chakra {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      opacity: 0.15;
+      animation: spin 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    h1 {
+      color: var(--navy-blue);
     }
     .btn-map {
       display: inline-block;
@@ -27,6 +48,7 @@
       text-decoration: none;
       border-radius: 0.5rem;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     .btn-map:hover {
       background-color: #333366;
@@ -34,19 +56,13 @@
   </style>
 </head>
 <body>
-  <h1 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">Hampi Stone Chariot</h1>
-  <p class="text-lg mb-4">
-    The Hampi Stone Chariot is an iconic monolithic monument located within the Vittala Temple complex in Hampi, Karnataka, India. Hampi was once the capital of the powerful Vijayanagara Empire during the 14th–16th centuries. Over centuries, Hampi became a grand seat of power, art, commerce, and religion, and today its ruins are a UNESCO World Heritage Site.  
-  </p>
-  <p class="text-lg mb-4">
-    The Stone Chariot is carved from granite and resembles a traditional temple chariot used during festivals. Its design includes richly carved wheels, pillars, and sculptures of deities, lotus motifs, and mythological scenes. It stands on a raised stone platform and appears to be drawn by stone wheels (though the wheels are fixed). It is believed to have been dedicated to Garuda, the vehicle (vahana) of Lord Vishnu.  
-  </p>
-  <p class="text-lg mb-4">
-    Surrounding the chariot are numerous ruins of temples, mandapas, shrines, and a river valley landscape of boulder-strewn hills, which add to the dramatic beauty of the site. The architecture in Hampi reflects a blend of Dravidian, Vijayanagara, and Hindu sculptural traditions.  
-  </p>
-  <p class="text-lg mb-4">
-    In its heyday, Hampi was a thriving cosmopolitan hub, connected through trade routes to the Deccan, Vijayanagara’s southern territories, and overseas maritime routes. The empire supported temples, public works — water tanks, aqueducts, and step wells — many of which remain in ruins. The Stone Chariot remains one of the most photographed monuments in Hampi, representing the artistic and engineering skills of ancient India.  
-  </p>
-  <a class="btn-map" href="https://maps.app.goo.gl/4opzx54tbggkJ67n8" target="_blank">📍 View on Google Maps</a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="chakra">
+  <h1 class="text-3xl font-bold mb-4">Hampi Chariot</h1>
+  <p class="text-lg mb-4">The Stone Chariot of Hampi is one of the most iconic monuments of the UNESCO World Heritage Site at Hampi, Karnataka, India. It is located inside the Vittala Temple complex.</p>
+  <p class="text-lg mb-4">It resembles a temple chariot and is dedicated to Garuda, the carrier of Lord Vishnu. The chariot is actually a shrine with intricate carvings.</p>
+  <p class="text-lg mb-4">Built during the reign of King Krishnadevaraya of the Vijayanagara Empire, it represents the architectural brilliance of the period.</p>
+  <p class="text-lg mb-4">The chariot is a symbol of Karnataka tourism and is featured on Indian currency notes as well.</p>
+
+  <a class="btn-map" href="https://maps.app.goo.gl/rRMqV5FYbbdzWWTS6" target="_blank">📍 View on Google Maps</a>
 </body>
 </html>

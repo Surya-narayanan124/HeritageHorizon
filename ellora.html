@@ -13,10 +13,31 @@
       --navy-blue: #000080;
     }
     body {
-      background: linear-gradient(to bottom, var(--saffron), white, var(--green));
+      background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
       font-family: 'Space Grotesk', sans-serif;
       margin: 0;
       padding: 1.5rem;
+      color: var(--navy-blue);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .chakra {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      opacity: 0.15;
+      animation: spin 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    h1 {
+      color: var(--navy-blue);
     }
     .btn-map {
       display: inline-block;
@@ -27,6 +48,7 @@
       text-decoration: none;
       border-radius: 0.5rem;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     .btn-map:hover {
       background-color: #333366;
@@ -34,19 +56,13 @@
   </style>
 </head>
 <body>
-  <h1 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">Ellora Caves</h1>
-  <p class="text-lg mb-4">
-    The Ellora Caves are a remarkable complex of rock-cut monasteries and temples carved into the basalt cliffs of the Sahyadri range in Maharashtra, India. Dating from around the 6th to 10th centuries CE, Ellora showcases the religious harmony of India’s medieval period, with Hindu, Buddhist, and Jain monuments existing side by side in close proximity.  
-  </p>
-  <p class="text-lg mb-4">
-    Among its most famous structures is the Kailasa temple (Cave 16), a monolithic temple carved downward from a single rock, dedicated to Lord Shiva. It is one of the largest monolithic structures in the world. Other caves include Buddhist viharas, Buddhist temples, and Jain cave shrines, each with elaborate sculptures, friezes, pillars, and shrines.  
-  </p>
-  <p class="text-lg mb-4">
-    The site reflects the ingenuity of ancient Indian craftsmen: the carving was done from top down, removing rock while preserving structural integrity. The architectural styles and iconography reveal strong influences from Gupta and Chalukya schools, with rich depictions of gods, dancers, demons, animals, and mythological narratives.  
-  </p>
-  <p class="text-lg mb-4">
-    Ellora also served as a pilgrimage and learning centre for monks, scholars, and patrons. Over centuries, it has drawn travelers, historians, and devotees due to its scale and artistic brilliance. Though weathering and erosion have affected some parts, conservation efforts help preserve its grandeur for future generations.  
-  </p>
-  <a class="btn-map" href="https://maps.app.goo.gl/afDnVa6VDJJ1789y5" target="_blank">📍 View on Google Maps</a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="chakra">
+  <h1 class="text-3xl font-bold mb-4">Ellora Caves</h1>
+  <p class="text-lg mb-4">The Ellora Caves, located in Maharashtra, India, are a UNESCO World Heritage Site famous for their monumental caves built between the 6th and 10th centuries.</p>
+  <p class="text-lg mb-4">There are 34 caves featuring Buddhist, Hindu, and Jain temples and monasteries carved directly into the rock face.</p>
+  <p class="text-lg mb-4">The most spectacular is Cave 16, the Kailasa temple, which is the largest monolithic rock excavation in the world.</p>
+  <p class="text-lg mb-4">Ellora represents a harmonious coexistence of different faiths and an extraordinary achievement of Indian rock-cut architecture.</p>
+
+  <a class="btn-map" href="https://maps.app.goo.gl/f4zW1mBqEdqgBW6z7" target="_blank">📍 View on Google Maps</a>
 </body>
 </html>

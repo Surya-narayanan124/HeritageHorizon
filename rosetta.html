@@ -13,10 +13,31 @@
       --navy-blue: #000080;
     }
     body {
-      background: linear-gradient(to bottom, var(--saffron), white, var(--green));
+      background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
       font-family: 'Space Grotesk', sans-serif;
       margin: 0;
       padding: 1.5rem;
+      color: var(--navy-blue);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .chakra {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      opacity: 0.15;
+      animation: spin 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    h1 {
+      color: var(--navy-blue);
     }
     .btn-map {
       display: inline-block;
@@ -27,6 +48,7 @@
       text-decoration: none;
       border-radius: 0.5rem;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     .btn-map:hover {
       background-color: #333366;
@@ -34,19 +56,13 @@
   </style>
 </head>
 <body>
-  <h1 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">The Rosetta Stone</h1>
-  <p class="text-lg mb-4">
-    The Rosetta Stone is one of the most important archaeological finds in human history. Discovered in 1799 by French soldiers near the town of Rosetta (Rashid), Egypt, it became the key to understanding Egyptian hieroglyphs. The artifact is a granodiorite stele that bears a decree issued in 196 BC in three scripts: Egyptian hieroglyphs, Demotic script, and Ancient Greek. Because scholars already knew Ancient Greek, the parallel inscriptions enabled them to finally decipher hieroglyphs, unlocking the language of ancient Egyptian civilization.  
-  </p>
-  <p class="text-lg mb-4">
-    The decree was issued during the reign of Ptolemy V, and the Stone’s trilingual inscription helped bridge a linguistic gap spanning centuries. For nearly 1,400 years, Egyptian hieroglyphs had been a mystery. The Rosetta Stone provided the comparative framework that allowed scholars like Jean-François Champollion to interpret hieroglyphic symbols as phonetic and semantic signs. In doing so, it opened up the written legacy of old Egypt: its religion, administration, art, and history, previously locked away behind a lost language.
-  </p>
-  <p class="text-lg mb-4">
-    The Rosetta Stone is physically about 114 cm tall, 72 cm wide, and weighs about 760 kilograms. Over time, parts of the surface have been damaged or worn, and some lines are missing. It is now displayed at the British Museum in London, where it remains one of the most visited objects. Its importance goes beyond its own value — it symbolizes human curiosity and the triumph of linguistics and historical scholarship.
-  </p>
-  <p class="text-lg mb-4">
-    Because of the Stone, many other Egyptian inscriptions, tomb walls, papyri, and temple reliefs could be read for the first time in modern times. This dramatically expanded our understanding of Egyptian religion, royal lineages, daily life, and their worldview. In short: without the Rosetta Stone, our knowledge of ancient Egypt would be far poorer.
-  </p>
- 
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="chakra">
+  <h1 class="text-3xl font-bold mb-4">The Rosetta Stone</h1>
+  <p class="text-lg mb-4">The Rosetta Stone is an ancient granodiorite stele discovered in 1799 in the Egyptian town of Rosetta. It is inscribed with a decree issued at Memphis in 196 BC on behalf of King Ptolemy V.</p>
+  <p class="text-lg mb-4">The text appears in three scripts: Ancient Egyptian hieroglyphs, Demotic script, and Ancient Greek. This allowed scholars to finally decipher Egyptian hieroglyphs.</p>
+  <p class="text-lg mb-4">It became one of the most important archaeological finds in history, unlocking the language and culture of Ancient Egypt.</p>
+  <p class="text-lg mb-4">The original stone is displayed at the British Museum in London and continues to attract millions of visitors worldwide.</p>
+
+  <a class="btn-map" href="https://maps.app.goo.gl/XLSySBuUJt8h1pPB8" target="_blank">📍 View on Google Maps</a>
 </body>
 </html>

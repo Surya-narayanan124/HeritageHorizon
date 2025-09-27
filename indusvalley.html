@@ -13,10 +13,31 @@
       --navy-blue: #000080;
     }
     body {
-      background: linear-gradient(to bottom, var(--saffron), white, var(--green));
+      background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
       font-family: 'Space Grotesk', sans-serif;
       margin: 0;
       padding: 1.5rem;
+      color: var(--navy-blue);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .chakra {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      opacity: 0.15;
+      animation: spin 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    h1 {
+      color: var(--navy-blue);
     }
     .btn-map {
       display: inline-block;
@@ -27,6 +48,7 @@
       text-decoration: none;
       border-radius: 0.5rem;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     .btn-map:hover {
       background-color: #333366;
@@ -34,19 +56,13 @@
   </style>
 </head>
 <body>
-  <h1 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">Indus Valley Toy Cart</h1>
-  <p class="text-lg mb-4">
-    The Indus Valley Civilization, also known as the Harappan Civilization, flourished in the northwestern region of South Asia around 3300–1300 BCE. It was one of the world’s earliest urban societies, noted for its advanced town planning, drainage systems, and craft specialization. :contentReference[oaicite:4]{index=4}  
-  </p>
-  <p class="text-lg mb-4">
-    Among the artifacts discovered in Harappan excavations is the toy cart — a small terracotta model of a wheeled cart. These miniature models likely served as children’s toys or ritual items, but they also reflect the technological and craft skill of the society. The existence of wheels, axles, wooden carts, and domesticated animals is inferred from such models, demonstrating the Indus people’s familiarity with transport and craftsmanship.  
-  </p>
-  <p class="text-lg mb-4">
-    The toy carts are often found in city sites like Harappa, Mohenjo-daro, Lothal, and Dholavira, indicating a cultural continuity across the civilization’s wide extent. They offer important clues about everyday life in Harappan cities: trade, movement of goods, and possibly symbolic or ritual processions.  
-  </p>
-  <p class="text-lg mb-4">
-    Though much of the Indus script remains undeciphered, the material remains — seals, weights, beads, pottery — show a well-organized society with craft specialization, standardization, and interregional trade. The toy cart thus stands as a small but telling emblem of that sophistication.  
-  </p>
-  <a class="btn-map" href="https://maps.app.goo.gl/79Ss3zMCGH3nuoN48" target="_blank">📍 View on Google Maps</a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="chakra">
+  <h1 class="text-3xl font-bold mb-4">Indus Valley Toy</h1>
+  <p class="text-lg mb-4">The Indus Valley Civilization (3300–1300 BCE) produced remarkable toys, including miniature carts and animal figurines, which showcase the craftsmanship of one of the world’s earliest urban cultures.</p>
+  <p class="text-lg mb-4">These toys, often made of terracotta, demonstrate not only the artistic sense but also insights into the daily life and technology of the time.</p>
+  <p class="text-lg mb-4">A famous example is the terracotta cart toy excavated at Harappa, which features wheels and a yoke for animals.</p>
+  <p class="text-lg mb-4">Such discoveries provide valuable information about trade, transport, and the lives of children thousands of years ago.</p>
+
+  <a class="btn-map" href="https://maps.app.goo.gl/L6x8S49WgWpzE4nd9" target="_blank">📍 View on Google Maps</a>
 </body>
 </html>

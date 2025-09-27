@@ -8,15 +8,36 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      var(--saffron: #FF9933);
-      var(--green: #138808);
-      var(--navy-blue: #000080);
+      --saffron: #FF9933;
+      --green: #138808;
+      --navy-blue: #000080;
     }
     body {
-      background: linear-gradient(to bottom, var(--saffron), white, var(--green));
+      background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
       font-family: 'Space Grotesk', sans-serif;
       margin: 0;
       padding: 1.5rem;
+      color: var(--navy-blue);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .chakra {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      opacity: 0.15;
+      animation: spin 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    h1 {
+      color: var(--navy-blue);
     }
     .btn-map {
       display: inline-block;
@@ -27,6 +48,7 @@
       text-decoration: none;
       border-radius: 0.5rem;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
     .btn-map:hover {
       background-color: #333366;
@@ -34,19 +56,13 @@
   </style>
 </head>
 <body>
-  <h1 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">India Gate</h1>
-  <p class="text-lg mb-4">
-    India Gate is a majestic war memorial located in New Delhi, India, designed by Sir Edwin Lutyens and completed in 1931. It commemorates the approximately 82,000 soldiers of the undivided British Indian Army who died during World War I (1914–1918) and the Afghan War of 1919. The names of these soldiers are inscribed on its surface.  
-  </p>
-  <p class="text-lg mb-4">
-    The structure is built of yellow and red sandstone and stands about 42 meters tall. It resembles the Arc de Triomphe in Paris in its imposing arch design. Surrounding the base is Amar Jawan Jyoti (“Flame of the Immortal Soldier”), a continuously burning flame erected in 1971 after India’s victory in the Indo-Pak war, symbolizing eternal tribute to unnamed soldiers.  
-  </p>
-  <p class="text-lg mb-4">
-    Located in the heart of Delhi, India Gate marks the eastern end of the ceremonial Rajpath (now Kartavya Path), which runs from Rashtrapati Bhavan (the Presidential residence). The area around it is popular for evening walks and events, especially during national celebrations and light shows.  
-  </p>
-  <p class="text-lg mb-4">
-    Over time, India Gate has become more than a memorial — it is also a focal point for public gatherings, celebrations on Republic Day, and a symbol of national pride. Its landscaped lawns, fountains, and wide vistas contribute to a dignified environment, and its illumination at night enhances its grandeur.  
-  </p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="chakra">
+  <h1 class="text-3xl font-bold mb-4">India Gate</h1>
+  <p class="text-lg mb-4">India Gate is a majestic war memorial located in New Delhi, India, designed by Sir Edwin Lutyens and completed in 1931. It commemorates the approximately 82,000 soldiers of the undivided British Indian Army who died during World War I and the Afghan War of 1919.</p>
+  <p class="text-lg mb-4">The structure is built of yellow and red sandstone and stands about 42 meters tall. It resembles the Arc de Triomphe in Paris in its imposing arch design. Surrounding the base is Amar Jawan Jyoti, a continuously burning flame erected in 1971 after India’s victory in the Indo-Pak war.</p>
+  <p class="text-lg mb-4">Located in the heart of Delhi, India Gate marks the eastern end of the ceremonial Rajpath (now Kartavya Path). The area around it is popular for evening walks and national celebrations.</p>
+  <p class="text-lg mb-4">Over time, India Gate has become more than a memorial — it is also a focal point for public gatherings and a symbol of national pride.</p>
+
   <a class="btn-map" href="https://maps.app.goo.gl/2mFbWP4bNtpAkfoZ8" target="_blank">📍 View on Google Maps</a>
 </body>
 </html>

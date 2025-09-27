@@ -13,10 +13,31 @@
       --navy-blue: #000080;
     }
     body {
-      background: linear-gradient(to bottom, var(--saffron), white, var(--green));
+      background: linear-gradient(to bottom, var(--saffron) 0%, white 50%, var(--green) 100%);
       font-family: 'Space Grotesk', sans-serif;
       margin: 0;
       padding: 1.5rem;
+      color: var(--navy-blue);
+      position: relative;
+      overflow-x: hidden;
+    }
+    .chakra {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 150px;
+      height: 150px;
+      opacity: 0.15;
+      animation: spin 20s linear infinite;
+      z-index: -1;
+    }
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    h1 {
+      color: var(--navy-blue);
     }
     .btn-map {
       display: inline-block;
@@ -27,29 +48,21 @@
       text-decoration: none;
       border-radius: 0.5rem;
       font-weight: 500;
+      transition: background-color 0.3s ease;
     }
-    .btn_map:hover {
+    .btn-map:hover {
       background-color: #333366;
     }
   </style>
 </head>
 <body>
-  <h1 class="text-3xl font-bold text-[var(--navy-blue)] mb-4">Taj Mahal</h1>
-  <p class="text-lg mb-4">
-    The Taj Mahal, often called “the crown of palaces,” is a magnificent white marble mausoleum located in Agra, Uttar Pradesh, India. Commissioned in 1632 by the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, who died during childbirth, it stands today as a symbol of eternal love and architectural excellence.   
-  </p>
-  <p class="text-lg mb-4">
-    The construction of the Taj Mahal spanned two decades, completed in 1648 for the central structure and later around 1653 for the adjoining buildings. Over 20,000 artisans, masons, stonemasons, and craftsmen from different parts of the subcontinent and abroad were involved. The principal architect is believed to be Ustad Ahmad Lahori, supported by several regional experts.   
-  </p>
-  <p class="text-lg mb-4">
-    What makes the Taj Mahal extraordinary is not just its sheer beauty but its structural harmony, symmetry, and intricate detailing. The main dome, about 73 meters tall, is flanked by four slender minarets. The exterior surfaces are inlaid with semi-precious stones — jasper, jade, lapis lazuli, amethyst, turquoise, and others — forming floral motifs and Quranic calligraphy. The monument appears to change color depending on the time of day: pinkish in the morning, milky white in the afternoon, and golden in moonlight.  
-  </p>
-  <p class="text-lg mb-4">
-    The complex also includes a mosque to the west, a guest house (jawab) to the east, formal gardens (Charbagh layout), reflecting pools, and a red sandstone gateway on the southern side. The entire layout is arranged to emphasize symmetry and balance.   
-  </p>
-  <p class="text-lg mb-4">
-    Over centuries, the Taj Mahal has faced challenges: air pollution, acid rain, and industrial activity near Agra have caused discoloration and damage to its marble surfaces. Authorities have attempted mitigation measures — green zones, traffic restrictions, and regular cleaning and conservation efforts. Despite these pressures, the Taj Mahal remains one of India’s most cherished heritage monuments and continues to draw millions of visitors from across the globe.  
-  </p>
-  <a class="btn-map" href="https://maps.app.goo.gl/zju9TvAUvqLnuShc7" target="_blank">📍 View on Google Maps</a>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ashoka_Chakra.svg/800px-Ashoka_Chakra.svg.png" alt="Ashoka Chakra" class="chakra">
+  <h1 class="text-3xl font-bold mb-4">Taj Mahal</h1>
+  <p class="text-lg mb-4">The Taj Mahal is an ivory-white marble mausoleum on the south bank of the Yamuna river in Agra, India. It was commissioned in 1632 by the Mughal emperor Shah Jahan to house the tomb of his favorite wife, Mumtaz Mahal.</p>
+  <p class="text-lg mb-4">It is regarded as one of the finest examples of Mughal architecture, combining elements from Islamic, Persian, Ottoman Turkish, and Indian architectural styles.</p>
+  <p class="text-lg mb-4">The Taj Mahal is a UNESCO World Heritage Site and widely recognized as the jewel of Muslim art in India and one of the universally admired masterpieces of the world's heritage.</p>
+  <p class="text-lg mb-4">Every year millions of visitors admire its beauty, especially during sunrise and sunset when the marble reflects different hues.</p>
+
+  <a class="btn-map" href="https://maps.app.goo.gl/RiUj4hQ9RBjbdNeD8" target="_blank">📍 View on Google Maps</a>
 </body>
 </html>
